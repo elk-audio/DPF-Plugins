@@ -25,7 +25,7 @@
 #define DISTRHO_PLUGIN_NAME  "glBars"
 #define DISTRHO_PLUGIN_URI   "http://distrho.sf.net/plugins/glBars"
 
-#define DISTRHO_PLUGIN_HAS_UI             1
+#define DISTRHO_PLUGIN_HAS_UI             0
 #define DISTRHO_PLUGIN_NUM_INPUTS         1
 #define DISTRHO_PLUGIN_NUM_OUTPUTS        1
 #define DISTRHO_PLUGIN_WANT_DIRECT_ACCESS 1

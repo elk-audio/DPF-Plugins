@@ -21,7 +21,7 @@
 #define DISTRHO_PLUGIN_NAME  "ProM"
 #define DISTRHO_PLUGIN_URI   "http://distrho.sf.net/plugins/ProM"
 
-#define DISTRHO_PLUGIN_HAS_UI        1
+#define DISTRHO_PLUGIN_HAS_UI        0
 #define DISTRHO_PLUGIN_NUM_INPUTS    1
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   1
 

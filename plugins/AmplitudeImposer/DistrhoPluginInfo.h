@@ -29,7 +29,7 @@
 #define DISTRHO_PLUGIN_NAME  "Amplitude Imposr"
 #define DISTRHO_PLUGIN_URI   "http://www.niallmoody.com/ndcplugs/ampimposer.htm"
 
-#define DISTRHO_PLUGIN_HAS_UI        1
+#define DISTRHO_PLUGIN_HAS_UI        0
 #define DISTRHO_PLUGIN_IS_RT_SAFE    1
 #define DISTRHO_PLUGIN_NUM_INPUTS    4
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   2
