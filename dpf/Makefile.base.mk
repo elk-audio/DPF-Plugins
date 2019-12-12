@@ -67,6 +67,9 @@ ifneq (,$(filter aarch64%,$(TARGET_PROCESSOR)))
 CPU_AARCH64=true
 CPU_ARM_OR_AARCH64=true
 endif
+ifeq (arm-elk-linux-gnueabi- ,$(CROSS_COMPILE))
+ELK_PI=true
+endif
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Set PKG_CONFIG (can be overridden by environment variable)
@@ -137,6 +140,9 @@ endif
 
 ifeq ($(CPU_ARM),true)
 BASE_OPTS += -mfpu=neon-vfpv4 -mfloat-abi=hard
+	ifeq ($(ELK_PI),true)
+		BASE_OPTS += -mcpu=cortex-a53 -mtune=cortex-a53 -funroll-loops -mvectorize-with-neon-quad
+	endif
 endif
 
 ifeq ($(MACOS),true)
