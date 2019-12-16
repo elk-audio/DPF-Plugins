@@ -14,7 +14,7 @@ Modified for headless plugin build for [Elk Audio OS](https://elk.audio)
 2. (optional) Add flags for more aggressive optimizations than the default ones from the toolchain with:  
 
    ```bash
-   $ export CXXFLAGS="-O3 -pipe -ffast-math -felimnate-unused-debug-types -funroll-loops -mvectorize-with-neon-quad"
+   $ export CXXFLAGS="-O3 -pipe -ffast-math -feliminate-unused-debug-types -funroll-loops -mvectorize-with-neon-quad"
    ```
 
 3. Finally cross compile the plugin using:  
