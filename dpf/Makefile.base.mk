@@ -70,6 +70,9 @@ endif
 ifeq (arm-elk-linux-gnueabi- ,$(CROSS_COMPILE))
 ELK_PI=true
 endif
+ifeq (aarch64-elk-linux-gnueabi- ,$(CROSS_COMPILE))
+ELK_PI=true
+endif
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Set PKG_CONFIG (can be overridden by environment variable)
@@ -143,6 +146,10 @@ BASE_OPTS += -mfpu=neon-vfpv4 -mfloat-abi=hard
 	ifeq ($(ELK_PI),true)
 		BASE_OPTS += -mcpu=cortex-a53 -mtune=cortex-a53 -funroll-loops -mvectorize-with-neon-quad
 	endif
+endif
+
+ifeq ($(ELK_PI_64),true)
+	BASE_OPTS += -mcpu=cortex-a72 -mtune=cortex-a72 -funroll-loops
 endif
 
 ifeq ($(MACOS),true)
